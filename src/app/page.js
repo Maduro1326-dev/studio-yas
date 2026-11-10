@@ -1,69 +1,108 @@
-import Image from "next/image";
+
+import Link from "next/link";
+import { FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="flex min-h-screen items-center justify-center px-5 py-12">
+
+      <section className="studio-card text-center">
+
+        {/* Identidade da marca */}
+        <header className="mb-12">
+
+          <p className="mb-4 text-xs tracking-[0.6em] text-[#673016]">
+            STUDIO
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+          <h1
+            translate="no"
+            className="font-serif text-7xl font-light tracking-[0.12em] text-[#673016]"
+          >
+            YΛS
+          </h1>
+
+          <p className="mt-6 text-sm tracking-wide text-[#673016]">
+            A beleza mora nos detalhes.
+          </p>
+
+        </header>
+
+        {/* Links principais */}
+        <nav
+          aria-label="Links do Studio Yas"
+          className="flex flex-col gap-4"
+        >
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://wa.me/5512992126289"
             target="_blank"
             rel="noopener noreferrer"
+            className="studio-button"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            Fale pelo WhatsApp
           </a>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://wa.me/5547999999999?text=Ola%21%20Gostaria%20de%20agendar%20um%20horario."
             target="_blank"
             rel="noopener noreferrer"
+            className="studio-button"
           >
-            Documentation
+            Agendar meu horário
           </a>
-        </div>
-      </main>
-    </div>
+
+          <Link
+            href="/portfolio"
+            className="studio-button"
+          >
+            Conhecer o portfólio
+          </Link>
+
+        </nav>
+
+        {/* Rodapé */}
+        
+<footer className="mt-12">
+
+  <div className="mx-auto mb-5 h-px w-16 bg-[#673016]/30" />
+
+  <p className="text-[11px] tracking-[0.2em] text-[#673016]">
+    BRUSQUE • SANTA CATARINA
+  </p>
+
+  
+<div className="social-links">
+  <a
+    href="https://www.instagram.com/studioyas.br/"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram do Studio Yas"
+    className="social-icon"
+  >
+    <FaInstagram size={23} />
+  </a>
+
+  <a
+    href="https://www.facebook.com/yasmin.parga.9"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook do Studio Yas"
+    className="social-icon"
+  >
+    <FaFacebookF size={23} />
+  </a>
+</div>
+
+  <p className="mt-5 text-[10px] tracking-wider text-[#673016]/70">
+    NAIL DESIGNER
+  </p>
+
+</footer>
+
+
+      </section>
+
+    </main>
   );
 }
